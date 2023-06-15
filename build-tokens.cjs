@@ -9,7 +9,18 @@ registerTransforms(StyleDictionary);
 
 StyleDictionary.registerTransformGroup({
   name: "custom/tokens-studio",
-  transforms: [...transforms, "attribute/cti", "name/cti/kebab"],
+  transforms: [...transforms, "attribute/cti", "name/cti/kebab", "name/cti/camel", "ts/descriptionToComment",
+  "ts/size/px",
+  "ts/opacity",
+  "ts/size/lineheight",
+  "ts/type/fontWeight",
+  "ts/resolveMath",
+  "ts/size/css/letterspacing",
+  "ts/typography/css/shorthand",
+  "ts/border/css/shorthand",
+  "ts/shadow/css/shorthand",
+  "ts/color/css/hexrgba",
+  "ts/color/modifiers" ],
 });
 
 const tokenFilter = (cat) => (token) => token.attributes.category === cat;

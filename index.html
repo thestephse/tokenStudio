@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script type="module" src="./button/button.js"></script>
-    <script type="module" src="./theme-handler.js"></script>
-    <style>
-      body {
-        font-family: sans-serif;
-        margin: 1rem;
-      }
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="button/button-biocatch-light.css">
+</head>
+<body>
+    <button class="primary-button">Click Me</button>
 
-      theme-toggler {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+    <style>
+        .primary-button {
+            background-color: var(--buttonColorPrimaryDefaultBackground);
+            border-color: var(--buttonColorPrimaryDefaultBorder);
+            color: var(--buttonColorPrimaryDefaultText);
+            padding-left: var(--buttonMdPaddingLeft);
+            padding-right: var(--buttonMdPaddingRight);
+            padding-top: var(--buttonMdPaddingTop);
+            padding-bottom: var(--buttonMdPaddingBottom);
+            font: var(--buttonMdTypography);
+            border-radius: var(--buttonMdBorderRadius);
+            border-width: var(--buttonBorderWidthSm);
+            box-shadow: var(--buttonDropshadowMain);
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+        }
+
+        .primary-button:hover {
+            background-color: var(--buttonColorPrimaryHoverBackground);
+            border-color: var(--buttonColorPrimaryHoverBorder);
+            color: var(--buttonColorPrimaryHoverText);
+        }
+
+        .primary-button:disabled {
+            background-color: var(--buttonColorPrimaryDisabledBackground);
+            border-color: var(--buttonColorPrimaryDisabledBorder);
+            color: var(--buttonColorPrimaryDisabledText);
+        }
+
+        .primary-button:focus {
+            box-shadow: var(--buttonDropshadowFocusPrimary);
+        }
     </style>
-  </head>
-  <body>
-    <theme-toggler></theme-toggler>
-    <h1>Demo</h1>
-    <tok-button>Click me!</tok-button>
-  </body>
+</body>
 </html>
